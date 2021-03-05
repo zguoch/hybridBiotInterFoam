@@ -149,7 +149,7 @@ volScalarField kinv
 #include "createTransportRxnFields.H"
 
 //Initializing Terzaghi Stress 
-volVectorField Terzaghi= -(sigma*rhof/rhos)*epss*fvc::grad(p);
+volVectorField Terzaghi(-(sigma*rhof/rhos)*epss*fvc::grad(p));
 
 //Pressure reference cells
 label pRefCell = 0;

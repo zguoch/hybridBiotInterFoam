@@ -84,7 +84,7 @@
     Ur = ( Uwetting/max(alpha1,0.01) - UnonWetting/max((1.-alpha1),0.01) )/max(eps,0.01);
     
     //Test border attenuation 
-    volVectorField SolidBorder = fvc::grad(mag(fvc::grad(Solid))); 
+    volVectorField SolidBorder (fvc::grad(mag(fvc::grad(Solid)))); 
     //volVectorField SolidBorder = fvc::grad(Solid);
     forAll (Ur,celli)
     {

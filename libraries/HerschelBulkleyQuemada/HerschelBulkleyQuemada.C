@@ -59,9 +59,9 @@ Foam::viscosityModels::HerschelBulkleyQuemada::calcNu() const
 epssStar.min((epssMax_.value()-0.01)); 
 epssStar.max(0.01); 
 
-volScalarField Tau0 = tau0_*pow( (epssStar/epssMax_) / max((1-epssStar/epssMax_),SMALL ),  Dstar_ ); 
+volScalarField Tau0(tau0_*pow( (epssStar/epssMax_) / max((1-epssStar/epssMax_),SMALL ),  Dstar_ )); 
 
-volScalarField nufInf = (nuf_/pow(max(SMALL,(1-epssStar/epssMax_)),2));
+volScalarField nufInf(nuf_/pow(max(SMALL,(1-epssStar/epssMax_)),2));
 
 return
     (

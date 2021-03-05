@@ -11,7 +11,7 @@
 
     adjustPhi(phiHbyA, U, p);
     
-    volVectorField SolidBorder = fvc::grad(Solid);
+    volVectorField SolidBorder(fvc::grad(Solid));
 
     // Gravity Contribution
     surfaceScalarField phiG 

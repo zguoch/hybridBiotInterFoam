@@ -1,0 +1,9 @@
+polyMesh
+doxygen/html/
+readme.html
+readme_zh.html
+TODO.html
+.DS_Store
+.python-version
+*.json
+*_temp.tex

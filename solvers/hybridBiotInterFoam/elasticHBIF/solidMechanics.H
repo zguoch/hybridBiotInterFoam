@@ -8,7 +8,7 @@ int iCorr = 0;
 scalar initialResidual = 0;
 
 //Calculating Source Terms
-volVectorField Terzaghi = -(epss/rho_s)*fvc::grad(p);  
+volVectorField Terzaghi (-(epss/rho_s)*fvc::grad(p));  
 volVectorField CapTerm ((Solid/rho_s)*
                          (
                            (eps*PcCoeff*dPcdS + epss*pc)*fvc::grad(alpha1)

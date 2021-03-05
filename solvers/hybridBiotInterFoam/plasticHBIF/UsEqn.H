@@ -1,7 +1,7 @@
 Info<< "\nCalculating Us" << endl;
 
 //Calculate terzaghi pressure vector
-volVectorField Terzaghi = -(epss/rho_s)*fvc::grad(p);
+volVectorField Terzaghi (-(epss/rho_s)*fvc::grad(p));
 
 //Calculating Explicit Capillary Interaction force
 volVectorField CapTerm ((Solid/rho_s)*
